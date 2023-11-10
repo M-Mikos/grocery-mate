@@ -77,7 +77,7 @@ The Grocery Mate application has been designed in a simple, flat graphic style, 
 
 In order to ensure optimal presentation of content, two different layouts have been designed for the application. The dimensioning of elements is based on REM units, defined separately for four breaking points (< 600px, < 900px, < 1200px and > 1200px, respectively).
 
-| Mobile layout                                                           | Desktop layout                                                        |
+| Desktop layout                                                           | Mobile layout                                                        |
 | ----------------------------------------------------------------------- | --------------------------------------------------------------------- |
 | ![Application view in desktop layout.](assets/screens/desktop-view.png) | ![Application view in mobile layout.](assets/screens/mobile-view.png) |
 
