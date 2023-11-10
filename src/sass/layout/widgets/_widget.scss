@@ -1,0 +1,17 @@
+.widget {
+  width: 100%;
+  color: palette(content-on-surface);
+  background-color: palette(surface);
+  padding: 2rem;
+
+  @include surfaceBorder;
+  @include respond(small) {
+    min-height: 6rem;
+    width: auto;
+    padding: 1rem;
+    border: none;
+    border-radius: 0;
+    background-color: palette(background);
+    @include flexRow;
+  }
+}

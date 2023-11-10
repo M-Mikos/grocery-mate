@@ -1,0 +1,35 @@
+.item {
+  max-height: 10rem;
+  list-style: none;
+  padding: 0.5rem;
+  opacity: 1;
+  border-bottom: 1px solid palette(neutral-1);
+  transform: translateX(0);
+  @include transitionAll(0.3);
+
+  &__content {
+    @include flexRow;
+    min-height: 4rem;
+  }
+
+  &__form {
+    @include flexRow;
+    height: 4rem;
+    padding-left: calc(2rem - 2px);
+  }
+
+  &__text {
+    flex: 1 0;
+    overflow-wrap: break-word;
+    word-break: break-all;
+  }
+
+  &__move {
+    @include flexColCentered;
+    gap: 0;
+  }
+
+  &:last-child {
+    border: none;
+  }
+}

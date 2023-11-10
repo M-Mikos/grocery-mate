@@ -1,0 +1,45 @@
+.input {
+  position: relative;
+  width: 100%;
+
+  &__field {
+    height: 5rem;
+    width: 100%;
+    padding: 0 2rem;
+    border: 2px solid palette(neutral-1);
+    border-radius: 5rem;
+    color: inherit;
+    outline: none;
+
+    &:hover {
+      border-color: palette(neutral-2);
+      @include transitionAll(0.15);
+    }
+
+    &:focus {
+      border-color: palette(primary);
+      @include transitionAll(0.15);
+    }
+
+    &:not(:placeholder-shown) + .input__label,
+    &:focus + .input__label {
+      top: 0;
+    }
+
+    &--edit-item {
+      height: 4rem;
+    }
+  }
+
+  &__label {
+    position: absolute;
+    display: block;
+    left: 2rem;
+    top: 50%;
+    padding: 0 0.5rem;
+    color: palette(neutral-2);
+    background-color: palette(surface);
+    transform: translateY(-50%);
+    transition: top 0.15s ease-in-out;
+  }
+}

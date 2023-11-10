@@ -1,0 +1,3 @@
+@function palette($role) {
+  @return var(--color-#{$role});
+}

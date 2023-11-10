@@ -1,0 +1,13 @@
+.time {
+  min-height: 12rem;
+  @include flexColCentered;
+
+  @include respond(small) {
+    &__hours {
+      font-size: 1.6rem;
+    }
+    &__date {
+      display: none;
+    }
+  }
+}

@@ -1,0 +1,15 @@
+@import "dark.scss";
+@import "light.scss";
+
+html,
+html[data-theme="light"] {
+  @each $role, $color in $light-theme {
+    --color-#{$role}: #{$color};
+  }
+}
+
+html[data-theme="dark"] {
+  @each $role, $color in $dark-theme {
+    --color-#{$role}: #{$color};
+  }
+}

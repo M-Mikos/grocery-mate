@@ -1,0 +1,50 @@
+.switch {
+  position: relative;
+  width: 4rem;
+  height: 2rem;
+
+  &__checkbox {
+    opacity: 0;
+    width: 0;
+    height: 0;
+
+    &:checked + .switch__slider {
+      background-color: palette(content-on-surface);
+      &:before {
+        background-color: palette(surface);
+      }
+    }
+
+    &:focus + .switch__slider {
+      box-shadow: 0 0 0.1rem palette(neutral-2);
+    }
+
+    &:checked + .switch__slider:before {
+      transform: translateX(2rem);
+    }
+  }
+
+  &__slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem;
+    background-color: palette(neutral-1);
+    transition: transform 0.15s ease;
+
+    &:before {
+      position: absolute;
+      content: "";
+      height: 1.6rem;
+      width: 1.6rem;
+      left: 0.2rem;
+      bottom: 0.2rem;
+      border-radius: 2rem;
+      background-color: palette(neutral-2);
+      transition: transform 0.15s ease;
+    }
+  }
+}

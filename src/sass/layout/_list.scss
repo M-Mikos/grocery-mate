@@ -1,0 +1,21 @@
+.list {
+  position: relative;
+  flex: 1 0 auto;
+
+  &__container {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    padding: 0 0.5rem;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+  }
+
+  &__message {
+    @include flexRow;
+    justify-content: center;
+    height: 4rem;
+    color: palette(neutral-2);
+  }
+}

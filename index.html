@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Marcin Mikos" />
+    <meta
+      name="description"
+      content="Simple app to help you plan your daily shopping"
+    />
+    <title>Your shopping list</title>
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.png" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script defer type="module" src="/src/js/controller/controller.js"></script>
+  </head>
+  <body>
+    <script>
+      0;
+      // Empty script after body tag is preventing Firefox FOUC bug. More: https://bugzilla.mozilla.org/show_bug.cgi?id=1404468
+    </script>
+
+    <!-- App content -->
+
+    <div class="app">
+      <main class="main">
+        <header class="header">
+          <div class="logo">
+            <svg class="logo__glyph">
+              <use href="assets/logo-mono.svg#logo-mono"></use>
+            </svg>
+            <h1 class="logo__name title">Grocery Mate</h1>
+          </div>
+        </header>
+        <div class="sections">
+          <section class="actions">
+            <div class="actions__form">
+              <form class="form js-add-item-form">
+                <div class="input">
+                  <input
+                    class="input__field text js-add-item-input"
+                    type="text"
+                    id="productname"
+                    name="productname"
+                    placeholder=" "
+                  />
+                  <label class="input__label text-s" for="productname"
+                    >Add item</label
+                  >
+                </div>
+
+                <button
+                  id="button-add-item"
+                  class="button button--submit"
+                  type="submit"
+                >
+                  <svg class="icon">
+                    <use href="assets/icons-ui.svg#add"></use>
+                  </svg>
+                </button>
+              </form>
+              <div
+                class="message message--error text-xs js-error-message"
+              ></div>
+            </div>
+            <div class="actions__buttons">
+              <button
+                class="button button--label text-button js-button--action js-button--reset"
+              >
+                Reset
+                <svg class="icon">
+                  <use href="assets/icons-ui.svg#reset"></use>
+                </svg>
+              </button>
+              <button
+                class="button button--label text-button js-button--action js-button--download"
+              >
+                Download
+                <svg class="icon">
+                  <use href="assets/icons-ui.svg#download"></use>
+                </svg>
+              </button>
+            </div>
+          </section>
+          <section class="list">
+            <ul class="list__container js-list-container"></ul>
+          </section>
+        </div>
+      </main>
+      <aside class="sidebar">
+        <div class="widget time">
+          <div class="time__hours text-xl"></div>
+          <div class="time__date text-s"></div>
+        </div>
+        <div class="widget weather js-widget-weather">
+          <button
+            class="weather__button button button--label text-button js-get-weather-button"
+          >
+            Get weather
+          </button>
+        </div>
+        <div class="widget theme">
+          <label class="theme__switch switch">
+            <input
+              class="switch__checkbox js-theme-switch"
+              type="checkbox"
+              id="theme-switch"
+              name="dark"
+              checked
+            />
+            <span class="switch__slider"></span>
+          </label>
+          <span class="theme__name text-xs">Dark theme</span>
+        </div>
+      </aside>
+      <footer class="footer text-xs">
+        Designed & coded by
+        <a class="footer__link" href="mailto:mikos.marcin.m@gmail.com"
+          >Marcin Mikos</a
+        >
+      </footer>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,11 @@
+.theme {
+  @include flexRow;
+  min-height: 6rem;
+  justify-content: center;
+
+  @include respond(small) {
+    &__name {
+      font-size: 1.4rem;
+    }
+  }
+}

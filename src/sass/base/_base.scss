@@ -1,0 +1,34 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  background-color: transparent;
+  border: none;
+}
+
+html {
+  font-size: 62.5%;
+
+  @include respond(large) {
+    font-size: 75%; // default 12px
+  }
+  @include respond(medium) {
+    font-size: 62.5%;
+    // default 10px
+  }
+  @include respond(small) {
+    font-size: 50%; // default 8px
+  }
+}
+
+body {
+  box-sizing: border-box;
+  background-color: palette(background);
+}
+
+::selection {
+  background-color: palette(primary);
+  color: palette(content-on-primary);
+}

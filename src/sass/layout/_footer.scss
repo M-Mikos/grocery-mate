@@ -1,0 +1,23 @@
+.footer {
+  grid-column: 1;
+  grid-row: 2;
+  justify-content: center;
+  color: palette(neutral-2);
+  @include flexRow;
+  @include respond(small) {
+    grid-row: 3;
+  }
+
+  &__link {
+    text-decoration: none;
+    @include transitionAll(0.15);
+
+    &:link,
+    &:visited {
+      color: inherit;
+    }
+    &:hover {
+      color: palette(primary);
+    }
+  }
+}

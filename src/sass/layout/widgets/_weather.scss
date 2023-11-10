@@ -1,0 +1,46 @@
+.weather {
+  @include flexColCentered;
+  min-height: 12rem;
+  gap: 0.5rem;
+
+  &__data {
+    @include flexColCentered;
+    gap: 0;
+
+    &-content {
+      @include flexRow;
+    }
+  }
+
+  &__location {
+    @include flexRow;
+    gap: 0.5rem;
+  }
+
+  &__desc:first-letter {
+    text-transform: uppercase;
+  }
+
+  &__error {
+    @include flexRow;
+  }
+
+  @include respond(small) {
+    &__temp {
+      font-size: 1.6rem;
+    }
+    &__location {
+      display: none;
+    }
+    &__button {
+      font-size: 1.4rem;
+    }
+    &__desc {
+      display: none;
+    }
+  }
+}
+
+.loading__text {
+  font-size: 1.4rem;
+}

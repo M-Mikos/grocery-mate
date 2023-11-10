@@ -1,0 +1,58 @@
+/*  Since rem units don't work as relative units in @media rule declaration, "max-width" property is set in em unit.
+More: https://medium.com/@barrypeng6/why-should-not-use-rem-unit-in-media-query-5645d0163ce5 */
+/* Breakpoint in px with default browser setting (font-size:16px): small = 600px, medium = 900px, large = 1200px */
+
+@mixin respond($breakpoint) {
+  @if $breakpoint == medium {
+    @media only screen and (max-width: 56.25em) {
+      @content;
+    }
+  }
+  @if $breakpoint == small {
+    @media only screen and (max-width: 37.5em) {
+      @content;
+    }
+  }
+  @if $breakpoint == large {
+    @media only screen and (min-width: 75em) {
+      @content;
+    }
+  }
+}
+
+@mixin absCentered {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+@mixin horizontallyCentered {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@mixin flexRow {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}
+
+@mixin flexColCentered {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+@mixin transitionAll($duration) {
+  transition: all $duration * 1s ease;
+}
+
+@mixin surfaceBorder() {
+  border: 2px solid palette(neutral-1);
+  border-radius: $border-radius;
+}

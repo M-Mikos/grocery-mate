@@ -1,0 +1,17 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  grid-row: 1;
+  grid-column: 2;
+
+  @include respond(small) {
+    flex-direction: row;
+    justify-content: space-between;
+    grid-column: 1;
+    gap: 0;
+    padding: 0 2rem;
+  }
+}
+

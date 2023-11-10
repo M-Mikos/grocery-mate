@@ -1,0 +1,29 @@
+.actions {
+  flex: 0;
+  padding: 2rem 2rem;
+  border-bottom: 2px solid palette(neutral-1);
+  @include respond(small) {
+    border-bottom: 0;
+    border-top: 2px solid palette(neutral-1);
+  }
+
+  &__buttons {
+    @include flexRow;
+    justify-content: start;
+  }
+}
+.form {
+  display: flex;
+  gap: 1rem;
+}
+
+.message {
+  height: 2rem;
+  margin-left: 2rem;
+  &--error {
+    color: palette(error);
+  }
+  @include respond(small) {
+    height: 3rem;
+  }
+}

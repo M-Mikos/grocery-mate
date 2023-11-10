@@ -1,0 +1,20 @@
+.u-none {
+  display: none !important;
+}
+.u-hidden {
+  visibility: hidden !important;
+}
+
+.u-adding {
+  opacity: 0;
+  transform: translateX(-24px) !important;
+  @include transitionAll(0.3);
+}
+
+.u-removing {
+  opacity: 0 !important;
+  transform: translateX(24px) !important;
+  max-height: 0 !important;
+  overflow: hidden !important;
+  @include transitionAll(0.3);
+}

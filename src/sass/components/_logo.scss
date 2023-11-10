@@ -1,0 +1,15 @@
+.logo {
+  @include flexRow;
+  width: fit-content;
+
+  &__glyph {
+    height: 6.5rem;
+    width: 6.5rem;
+    color: palette(primary);
+  }
+
+  &__name {
+    color: palette(content-on-surface);
+    font-size: 2rem;
+  }
+}

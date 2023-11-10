@@ -1,0 +1,14 @@
+.main {
+  display: flex;
+  flex-direction: column;
+  background-color: palette(surface);
+  grid-row: 1;
+  grid-column: 1;
+  overflow: hidden;
+  @include surfaceBorder;
+  @include respond(small) {
+    grid-row: 2;
+    border: none;
+    border-radius: 0;
+  }
+}
