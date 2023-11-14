@@ -56,17 +56,17 @@ $ npm run build:css
 
 ## Features
 
-- adding new item to the list, with basic validation
-- deleting selected item,
-- editing selected item's name,
-- changing item position on list by moving it up or down,
-- resetting list,
-- downloading list as `.txt` file,
-- displaying current time and date,
-- requesting current weather based on device location,
-- switching between light or dark theme,
-- auto-saving list data in browser's local storage,
-- loading list data from local storage on page load,
+- add new item to the list, with basic validation
+- delete selected item,
+- edit selected item's name,
+- change item position on list by moving it up or down,
+- reset list,
+- download list as `.txt` file,
+- display current time and date,
+- request current weather based on device location,
+- switch between light or dark theme,
+- auto-save list data in browser's local storage,
+- load list data from local storage on the page load,
 - responsive design.
 
 ## Design
